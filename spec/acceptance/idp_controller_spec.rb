@@ -20,7 +20,6 @@ feature 'IdpController' do
     fill_in 'Email', :with => "brad.copa@example.com"
     fill_in 'Password', :with => "okidoki"
     click_button 'Sign in'
-    byebug
     expect(page).to have_content("Can't verify CSRF token authenticity.")
   end
 
