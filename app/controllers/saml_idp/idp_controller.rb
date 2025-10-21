@@ -4,7 +4,7 @@ module SamlIdp
 
     unloadable if Rails.version.to_i < 7
 
-    protect_from_forgery
+    protect_from_forgery with: :exception
 
     if Rails.version.to_i < 4
       before_filter :validate_saml_request
